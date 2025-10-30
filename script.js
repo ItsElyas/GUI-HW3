@@ -50,4 +50,6 @@ function generateTable(event) {
 
         table.appendChild(row);
     }
+    document.querySelector(".tableDiv").style.display = "block";
+
 }
