@@ -1,6 +1,6 @@
 function generateTable(event) {
     event.preventDefault(); 
-
+    // Gets input values
     let minColumn = parseInt(document.getElementById("minColumn").value);
     let maxColumn = parseInt(document.getElementById("maxColumn").value);
     let minRow = parseInt(document.getElementById("minRow").value);
@@ -11,7 +11,7 @@ function generateTable(event) {
 
     errorMessage.textContent = "";
     table.innerHTML = "";
-
+    // Tests for input errors
     if (isNaN(minColumn) || isNaN(maxColumn) || isNaN(minRow) || isNaN(maxRow)) {
         errorMessage.textContent = "All inputs must be valid integers.";
         return;
@@ -24,7 +24,7 @@ function generateTable(event) {
         errorMessage.textContent = "Minimum row value cannot be greater than maximum row value.";
         return;
     }
-
+    // Builds multiplication table
     let headerRow = document.createElement("tr");
     headerRow.appendChild(document.createElement("th")); 
 
