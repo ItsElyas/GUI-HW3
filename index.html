@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplication Table</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="formDiv">
+        <form id="form" onsubmit="generateTable(event)">
+            <h1>Multiplication Table</h1>
+            <label for="minColumn">Minimum Column Value:</label>
+            <input type="number" id="minColumn" required>
+
+            <label for="maxColumn">Maximum Column Value:</label>
+            <input type="number" id="maxColumn" required>
+
+            <label for="minRow">Minimum Row Value:</label>
+            <input type="number" id="minRow" required>
+
+            <label for="maxRow">Maximum Row Value:</label>
+            <input type="number" id="maxRow" required>
+
+            <button type="submit" id="generateBtn">Generate Table</button>
+        </form>
+    </div>
+        <p id="errorMessage" class="error"></p>
+
+        <div class="tableDiv">
+            <table id="multiplicationTable"></table>
+        </div>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
